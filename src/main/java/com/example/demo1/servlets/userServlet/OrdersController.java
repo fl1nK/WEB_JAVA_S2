@@ -31,6 +31,4 @@ public class OrdersController extends HttpServlet {
         request.getRequestDispatcher("/UserMenuServlet").forward(request, response);
 
     }
-
-
 }

@@ -19,6 +19,6 @@
     </form>
 </div>
 ${error}<br>
-<a href="<c:url value="/registration_menu.jsp"/>">Registration</a>
+<a href="/registration_menu.jsp">Registration</a>
 </body>
 </html>

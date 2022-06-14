@@ -19,6 +19,6 @@ public class MasterAcceptController extends HttpServlet {
         int id = Integer.parseInt(request.getParameter("id"));
 
         OrderDAO.updateStatusOrder(id, "Now under renovation");
-        response.sendRedirect("/");
+        request.getRequestDispatcher("/MasterMenuServlet").forward(request,response);
     }
 }

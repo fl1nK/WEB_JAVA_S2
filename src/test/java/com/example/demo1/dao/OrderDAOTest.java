@@ -12,15 +12,15 @@ class OrderDAOTest {
 
     @Test
     void showForUser() {
-        String login = "21";
+        String login = "123";
         List<Orders> expResult = OrderDAO.showForUser(login);
-        assertNotNull(expResult);
+        assertNotNull(expResult.get(0));
     }
 
     @Test
     void showForAdmin() {
         List<Orders> expResult = OrderDAO.showForAdmin();
-        assertNotNull(expResult);
+        assertNotNull(expResult.get(0));
     }
 
     @Test
@@ -39,22 +39,22 @@ class OrderDAOTest {
 
     @Test
     void showByStatus() {
-        String status = "vdsaz";
+        String status = "1"; // 1 - 5
         List<Orders> expResult = OrderDAO.showByStatus(status);
-        assertNotNull(expResult);
+        assertNotNull(expResult.get(0));
     }
 
     @Test
     void showByMaster() {
-        String masterLogin = "master";
+        String masterLogin = "master1";
         List<Orders> expResult = OrderDAO.showByMaster(masterLogin);
-        assertNotNull(expResult);
+        assertNotNull(expResult.get(0));
     }
 
     @Test
     void getPriceForOrder() {
-        int id = 1;
-        int price = 0;
+        int id = 14;
+        int price = 1111;
         int expResult = OrderDAO.getPriceForOrder(id);
         assertEquals(expResult, price);
     }
@@ -63,13 +63,13 @@ class OrderDAOTest {
     void sort() {
         String sort = "priceUp";
         List<Orders> expResult = OrderDAO.sort(sort);
-        assertNotNull(expResult);
+        assertNotNull(expResult.get(0));
     }
 
     @Test
     void getComments() {
-        String masterLogin = "21";
+        String masterLogin = "master1";
         List<Orders> expResult = OrderDAO.getComments(masterLogin);
-        assertNotNull(expResult);
+        assertNotNull(expResult.get(0));
     }
 }

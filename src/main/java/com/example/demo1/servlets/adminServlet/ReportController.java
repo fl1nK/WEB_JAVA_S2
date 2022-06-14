@@ -19,7 +19,7 @@ public class ReportController extends HttpServlet {
     }
 
     @Override
-    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+    public void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String sort = request.getParameter("sort");
         String statusList = request.getParameter("statusList");
         String master = request.getParameter("master");

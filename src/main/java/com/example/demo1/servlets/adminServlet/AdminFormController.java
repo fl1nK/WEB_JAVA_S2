@@ -23,6 +23,6 @@ public class AdminFormController extends HttpServlet {
         OrderDAO.update(id, price, master);
 
         request.getRequestDispatcher("/AdminMenuServlet").forward(request, response);
-       // response.sendRedirect("/");
+
     }
 }

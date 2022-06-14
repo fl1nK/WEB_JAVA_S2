@@ -19,6 +19,6 @@ public class MasterEndRepairController extends HttpServlet {
         int id = Integer.parseInt(request.getParameter("id"));
 
         OrderDAO.updateStatusOrder(id, "Repair completed");
-        response.sendRedirect("/");
+        request.getRequestDispatcher("/MasterMenuServlet").forward(request,response);
     }
 }

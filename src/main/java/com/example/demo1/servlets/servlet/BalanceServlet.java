@@ -22,7 +22,6 @@ public class BalanceServlet extends HttpServlet {
         UserDAO.setMoneyUser(login, money);
 
         request.setAttribute("pay", "Payment confirmed");
-        request.getRequestDispatcher("balance.jsp")
-                .forward(request, response);
+        request.getRequestDispatcher("balance.jsp").forward(request, response);
     }
 }

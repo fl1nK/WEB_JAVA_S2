@@ -16,7 +16,8 @@ public class MasterCommentServlet extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        String login = (String) request.getSession().getAttribute("login");
+
+        String login = String.valueOf(request.getSession().getAttribute("login"));
 
         request.setAttribute("listComments", OrderDAO.getComments(login));
         request.getRequestDispatcher("/WEB-INF/view/master_comments.jsp").forward(request, response);

@@ -27,6 +27,9 @@ class ReportControllerTest {
         final HttpServletResponse response = mock(HttpServletResponse.class);
         final RequestDispatcher dispatcher = mock(RequestDispatcher.class);
 
+        when(request.getParameter("sort")).thenReturn("priceUp"); // priceUp priceDown dateUp dateDown statusUp statusDown
+        when(request.getParameter("statusList")).thenReturn("statusList");
+        when(request.getParameter("master")).thenReturn("master");
         when(request.getRequestDispatcher(path)).thenReturn(dispatcher);
 
         servlet.doPost(request,response);

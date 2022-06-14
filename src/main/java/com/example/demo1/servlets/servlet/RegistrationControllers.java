@@ -29,7 +29,8 @@ public class RegistrationControllers extends HttpServlet {
             request.getRequestDispatcher("/registration_menu.jsp").forward(request, response);
         }else{
             UserDAO.save(new User(login, password,0, USER));
-            response.sendRedirect("/");
+            request.getRequestDispatcher("/WEB-INF/view/login.jsp").forward(request, response);
+
         }
 
     }
